@@ -352,7 +352,7 @@ for item in items:
     print(item)
 
 #You can iterate a specific amount of time using the range() function
-for item in range(04):
+for item in range(4):
     print(item)
 #range(4) creates a sequence that starts from 0 and contains 4 items: [0,1,2,3]
 
@@ -403,7 +403,7 @@ class Pythonista:
 Person1 = Pythonista('John', 16)
 print(Person1.name)
 print(Person1.age)
-roger.level()
+Person1.level()
 
 # Inheritance
 class Animal:
