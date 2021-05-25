@@ -56,42 +56,48 @@ Virtual Environments in Python
     e) Bitwise operators
 """
 #Assignment operators
-#age = 8
-#anotherVariable = age
+age = 8
+anotherVariable = age
 #Arithmetic operators
 """
     Python has a number of arithmetic operators: +,-*,/,%,**(exponentiation) and //floor division
 
 """
-#num1 = 10
-#num2 = 5
-#sum = num1 + num2
-#difference = num1 - num2
-#product = num1*num2
-#division = num1/num2
-#modulus = num1%num2
-#exponents = num1**2
-#floor = num1//num2
+num1 = 10
+num2 = 5
+sum = num1 + num2
+difference = num1 - num2
+product = num1*num2
+division = num1/num2
+modulus = num1%num2
+exponents = num1**2
+floor = num1//num2
+print(sum)
+print(modulus)
+print(exponents)
+print(floor)
 # + is also used to concatentate strings
 #name = 'Pivot'
 print('Welcome to ' + '' + name + ' Python Webinar series')
 """
     We can combine the assignment operator with arithmetic operators: +=, -=, *=, /=, %=
 """
-#years = 10
+years = 10
+years = years + 1
 #years += 1
+print(years)
 #Comparison operators in Python: ==, !=, >, <, <=, >=
-#num1 == num2
-#num1 != num2
+num1 == num2
+num1 != num2
 #Boolean operators in Python
 """
     Python gives us the following boolean operations:not, and & or
 """
-#condition1 = True
-#condition2 = False
-#not condition1
-#condition1 and condition2
-#condition1 or condition2
+condition1 = True
+condition2 = False
+not condition1
+condition1 and condition2
+condition1 or condition2
 
 #Bitwise operators in Python
 """
@@ -128,7 +134,7 @@ def is_adult(age):
 #Introspection in Python with help(),type() and dir()
 
 
-#member = 'John'
+member = 'JOHN'
 """
     A string has a set of built-in methods, like:
     a) isalpha(): check if a string contains only characters and is not empty
@@ -147,12 +153,13 @@ def is_adult(age):
     n) join(): to append new letters to a string
     o) find(): to find the position of a substring
 """
-#print(member.lower())
-#print(len(member))
-#print("Jo" in member)
+print(member.lower())
+print(len(member))
+print("JO" in member)
 #Slicing
-#name = 'Pivot'
-#name[1:3]
+name = 'Pivot'
+print(name[1:3])
+
 #Numbers in Python
 """
     1) Integer numbers
@@ -179,7 +186,7 @@ def is_adult(age):
 """
     Python has no way to enforce that a variable should be a constant. The nearest you can get is to use an enum or use tuples
 """
-#from enum import Enum
+from enum import Enum
 """
 class State(Enum):
     INACTIVE = 0
@@ -293,7 +300,8 @@ else:
 
 # 5) Sets in Python
 """
-    Sets work like tuples, but they aren't ordered, and they are mutable. They also have an immutable version called frozenset
+    Sets work like tuples, but they aren't ordered, and they are mutable.
+    They also have an immutable version called frozenset
 """
 #programmingLanguages = {'Python', 'C++', 'C','C#', 'JavaScript'}
 #set1 = {'C++','C#','C'}
@@ -310,6 +318,7 @@ else:
 # Functions in Python
 """
     Allow us to decompose a program into manageable parts, and they promote readability and code reuse
+    Follows the DRY(Do not Repeat Yourself) principle
 """
 """
 def hello():
@@ -410,7 +419,11 @@ for item in items:
     print(item)
 """
 
-
+#Objected Oriented Programming in Python
+"""
+OOP allows decomposition of a problem into a number of units
+called objects and them build the data and functions around these objects
+"""
 #Classes in Python
 """
     An object is an instance of a class. A class is the type of an object.
@@ -466,7 +479,8 @@ class Dog(Animal):
 
 #Modules in Python
 """
-    Every python file is a module. You can import a module from other files, and that's the base of any program of moderate complexity
+    Every python file is a module.
+    You can import a module from other files, and that's the base of any program of moderate complexity
 """
 # Python Standard Library
 """
