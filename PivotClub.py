@@ -197,19 +197,19 @@ class State(Enum):
 #User Input in Python
 #print("What is your favorite music genre?")
 #favMusicGenre = input()
-#print('Your favorite music genre is' + favMusicGenre)
-
+#print('Your favorite music genre is ' + '' + favMusicGenre)
 #Control Statements in Python
-#condition = True
-"""
+condition = True
 if condition == True:
     print('The condition')
     print('was true')
-"""
 
 
-#grade = ('A','B','C','D','E')
-"""
+
+grade = ('A','B','C','D','E')
+
+#print('What is your grade?')
+#grade = input()
 if grade == 'A':
     print('Excellent')
 elif grade == 'B':
@@ -221,26 +221,28 @@ elif grade == 'D':
 else:
     print('Very Poor')
 
-"""
+
 
 #Data structures in Python
 # 1) Lists in Python
 """
     Lists are an essential Python data structure
 """
-#musicGenre = ['Pop','RNBs','HipHop']
-#musicGenre[0]
-#musicGenre[1]
+musicGenre = ['Pop','RNBs','HipHop']
+musicGenre[0]
+musicGenre[1]
 #You can also use the index() method
 #musicGenre.index(0)
 #You can extract a part of a list
-#musicGenre[0:2]
+print(musicGenre[0:2])
 #You can add items to the list using a list append() method
-#musicGenre.append('CountryMusic')
+musicGenre.append('CountryMusic')
+
 #Or use the extend() method
 #musicGenre.extend(['House'])
 #Remove an item using the remove() method
-#musicGenre.remove('CountryMusic')
+musicGenre.remove('CountryMusic')
+print(musicGenre)
 #You can also add multiple elements using:
 #musicGenre += ['Dancehall','Reggae']
 #Alternatively
@@ -255,17 +257,19 @@ else:
     List comprehensions are a way to create lists in a very concise way.
 
 """
-#numbers = [1, 2, 3, 4, 5]
-#numbers_power_2 = [n**2 for n in numbers]
+numbers = [1, 2, 3, 4, 5]
+numbers_power_2 = [n**2 for n in numbers]
+print(numbers_power_2)
 
 # 3) Tuples
 """
     Allow you to create immutable groups of objects.
     A tuple is ordered like a list, so you can get its values by referencing an index value
 """
-#constants = (3.142,3*10**8)
-#constants[0]
-#len(constants)
+constants = (3.142,3*10**8)
+constants[0]
+len(constants)
+print(len(constants))
 #constants[0:2]
 
 # 4) Dictionaries
@@ -274,27 +278,31 @@ else:
     dictionaries allow you to create a collection of key/value pairs
     They key can be any immutable value like a string, a number or a tuple
 """
-#bestTeams = {'EPL': 'Mancity', 'Bundesliga':'Bayern Munchen'}
-#bestTeams['EPL']
+bestTeams = {'EPL': 'Mancity', 'Bundesliga':'Bayern Munchen'}
+
 #bestTeams['Bundesliga']
 #Using the same notation you can change the value stored at a specific index
-#bestTeams['EPL'] = 'Manchester United'
+bestTeams['EPL'] = 'Manchester United'
+print(bestTeams['EPL'])
 #Another way is using the get() method, which has an option to add a default value
 #bestTeams.get('EPL')
 #The pop() method retrieves the values of a key, and subsequently deletes the item from the dictionary
-#bestTeams.pop('EPL')
+bestTeams.pop('EPL')
+
 #The popitem() method retrieves and removes the last key/value pair inserted into the dictionary
 #bestTeams.popitem()
 #bestTeams.append({'SuperLeague':'Mancity'})
 #You can add a new key/value pair to the dictionary
-#bestTeams['Europa'] = 'Juventus'
+bestTeams['Europa'] = 'Juventus'
+
 #Get a list with keys in a dictionary using the keys() method, passing its result to the list() constructor
 #list(bestTeams.keys())
 #Get the values using the values() method, and the key/value pairs tuples using the items() method
 #print(list(bestTeams.values()))
 #print(list(bestTeams.items()))
 #You can remove a key/value pair from a dictionary using the del statement
-#del bestTeams['Europa']
+del bestTeams['Europa']
+print(bestTeams)
 #To copy a dictionary, use the copy() method
 #bestTeamsCopy = bestTeams.copy()
 
@@ -303,13 +311,15 @@ else:
     Sets work like tuples, but they aren't ordered, and they are mutable.
     They also have an immutable version called frozenset
 """
-#programmingLanguages = {'Python', 'C++', 'C','C#', 'JavaScript'}
-#set1 = {'C++','C#','C'}
-#set2 = {'Python','Perl','Matlab'}
+programmingLanguages = {'Python', 'C++', 'C','C#', 'JavaScript'}
+set1 = {'C++','C#','C'}
+set2 = {'Python','Perl','Matlab'}
 #intersect
-#set1 & programmingLanguages
+inter = set1 & programmingLanguages
+print(inter)
 #union
-#set1 | programmingLanguages
+union = set1 | programmingLanguages
+print(union)
 #difference
 #set1 - programmingLanguages
 #You can check if a set is a superset of another
@@ -320,16 +330,15 @@ else:
     Allow us to decompose a program into manageable parts, and they promote readability and code reuse
     Follows the DRY(Do not Repeat Yourself) principle
 """
-"""
+
 def hello():
     print('Hello!')
 
 def hello1(name):
-    print('Hello'+ name + '!')
-"""
+    print('Hello '+ name + '!')
 
-
-#hello1(Pythonistas)
+Pythonistas = 'Pivot'
+hello1(Pythonistas)
 """
 def individual(name,age):
     print('Hello' + name + 'you are' + str(age) + 'years old')
@@ -343,9 +352,9 @@ def individual(name,age):
     Objects have attributes and methods that can be accessed using the dot syntax
     Examples shown below:
 """
-#total = 58
-#print(total.real)
-#print(total.imag)
+total = 58
+print(total.real)
+print(total.imag)
 #print(total.bit_length())
 #the bit_length() returns the number of bits necessary to represent this number in binary notation
 
@@ -370,27 +379,26 @@ def individual(name,age):
     In Python we have two kinds of loops: while and for loops
 """
 #while loops in Python
-#count = 0
-"""
+count = 0
 while count < 10:
     print('The condition is true')
     count += 1
 print('After the loop')
-"""
+
 
 #for loops in Python
-#items = [1,2,3,4]
-"""
+items = [1,2,3,4]
+
 for item in items:
     print(item)
-"""
+
 
 
 #You can iterate a specific amount of time using the range() function
-"""
-for item in range(4):
+
+for item in range(1,4):
     print(item)
-"""
+
 
 #range(4) creates a sequence that starts from 0 and contains 4 items: [0,1,2,3]
 
@@ -407,7 +415,7 @@ for index,item in enumerate(items):
         1) Continue: stops the current iteration and tells Python to execute the next one
         2) Break: stops the loop altogether and goes on with the next instruction after the loop ends
 """
-"""
+
 for item in items:
     if item == 2:
         continue
@@ -417,7 +425,7 @@ for item in items:
     if item == 2:
         break
     print(item)
-"""
+
 
 #Objected Oriented Programming in Python
 """
@@ -430,21 +438,21 @@ called objects and them build the data and functions around these objects
     A class can define methods
 """
 
-"""
+
 class Pythonista:
     def level(self):
         print('Amateur')
-"""
+
 
 
 # self as the argument of the method points to the current object instance, and must be specified when defining a method
 
 # Create an instance of a class, using the syntax:
-#Guido_Von_Rossum = Pythonista()
+Guido_Von_Rossum = Pythonista()
 
 #A special type of method __init__(), a constructor is used to initialize one or more properties when we create a new object from that class
 
-"""
+
 class Pythonista:
     def __init__(self,name,age):
         self.name = name
@@ -458,7 +466,7 @@ print(Person1.name)
 print(Person1.age)
 Person1.level()
 
-"""
+
 
 # Inheritance
 """
@@ -506,7 +514,7 @@ Some of the important modules are:
 
 # Debugging in Python
 #You debug by adding a breakpoint into your code
-#breakpoint()
+breakpoint()
 
 #Variable scope in Python
 #Global variables and Local Variables
@@ -560,6 +568,7 @@ def logtime(func):
 
 
 #How to Install 3rd Party Packages in Python Using pip
+#pip install requests
 """
     The Python standard library contains a huge number of utilities that simplify our Python development needs,
     but nothing can satisfy everything.
@@ -576,6 +585,8 @@ def logtime(func):
 
     To solve this, you use virtual environments.
 """
+#python -m venv env
+#pip install venv wrapper
 
 
 
