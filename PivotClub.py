@@ -166,6 +166,7 @@ print(name[1:3])
     2) Floating point numbers
     3) Complex Numbers
 """
+real = 5.0
 #Complex numbers can be declared as follows:
 #complexNumber = 2 + 3j
 # Or declared as follows:
